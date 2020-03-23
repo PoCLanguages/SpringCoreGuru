@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class GreetingController {
 
     private HelloWorldService helloWorldService;
@@ -15,19 +15,19 @@ public class GreetingController {
 
     private HelloWorldService helloWorldServiceFrench;
 
-    @Autowired
+//    @Autowired
     public void setHelloWorldService(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
     }
 
-    @Autowired
-    @Qualifier("helloWorldServiceGerman")
+//    @Autowired
+//    @Qualifier("helloWorldServiceGerman")
     public void setHelloWorldServiceGerman(HelloWorldService helloWorldServiceGerman) {
         this.helloWorldServiceGerman = helloWorldServiceGerman;
     }
 
-    @Autowired
-    @Qualifier("french")
+//    @Autowired
+//    @Qualifier("french")
     public void setHelloWorldServiceFrench(HelloWorldService helloWorldServiceFrench) {
         this.helloWorldServiceFrench = helloWorldServiceFrench;
     }
@@ -40,8 +40,6 @@ public class GreetingController {
         System.out.println(helloWorldServiceFrench.getGreeting());
         return greeting;
     }
-
-
 
 
 

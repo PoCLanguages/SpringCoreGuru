@@ -12,47 +12,47 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class HelloConfig {
 
-    @Bean
-    public HelloWorldFactory helloWorldFactory(){
-        return new HelloWorldFactory();
-    }
+//    @Bean
+//    public HelloWorldFactory helloWorldFactory(){
+//        return new HelloWorldFactory();
+//    }
 
-    @Bean
-    @Profile("english")
-    @Primary
-    public HelloWorldService helloWorldServiceEnglish(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("en");
-    }
+//    @Bean
+//    @Profile("english")
+//    @Primary
+//    public HelloWorldService helloWorldServiceEnglish(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("en");
+//    }
+//
+//    @Bean
+//    @Profile("spanish")
+//    @Primary
+//    public HelloWorldService helloWorldServiceSpanish(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("es");
+//    }
 
-    @Bean
-    @Profile("spanish")
-    @Primary
-    public HelloWorldService helloWorldServiceSpanish(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("es");
-    }
+//    @Bean(name = "french")
+////    @Profile("french")
+//    public HelloWorldService helloWorldServiceFrench(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("fr");
+//    }
 
-    @Bean(name = "french")
-//    @Profile("french")
-    public HelloWorldService helloWorldServiceFrench(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("fr");
-    }
+//    @Bean
+////    @Profile("german")
+//    public HelloWorldService helloWorldServiceGerman(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("de");
+//    }
 
-    @Bean
-//    @Profile("german")
-    public HelloWorldService helloWorldServiceGerman(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("de");
-    }
-
-    @Bean
-//    @Profile("polish")
-    public HelloWorldService helloWorldServicePolish(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("pl");
-    }
-
-    @Bean
-//    @Profile("russian")
-    public HelloWorldService helloWorldServiceRussian(HelloWorldFactory helloWorldFactory){
-        return helloWorldFactory.createHelloWorldService("ru");
-    }
+//    @Bean
+////    @Profile("polish")
+//    public HelloWorldService helloWorldServicePolish(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("pl");
+//    }
+//
+//    @Bean
+////    @Profile("russian")
+//    public HelloWorldService helloWorldServiceRussian(HelloWorldFactory helloWorldFactory){
+//        return helloWorldFactory.createHelloWorldService("ru");
+//    }
 
 }
